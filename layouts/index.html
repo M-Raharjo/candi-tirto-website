@@ -9,7 +9,77 @@
 </head>
 
 <body>
-    <h1>{{ .Site.Title }}</h1>
-    <p>Hugo is working.</p>
+    {{ partial "header.html" . }}
+
+    <section id="hero"> 
+        <img
+            class="hero-background"
+            src="https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-01-495x400.jpg"
+            alt=""
+        >
+
+        <h1> Candi Tirto Raharjo </h1>
+        <h2>#1 MICE Venue with Temple in Jogja</h2>
+
+        <a href="https://maps.app.goo.gl/Gd7ErRG6F4Z1gab76" target="_blank" rel="noopener" class="button">
+            Lokasi
+        </a>
+
+        <a href="https://wa.me/6282261618110?text=Halo%2C%20saya%20ingin%20melakukan%20reservasi." target="_blank" rel="noopener" class="button">
+            Reservasi
+        </a>
+    </section>
+
+    <section id="about">
+        <p>Deskripsi pakai bahasa indonesia</p>
+        <p>Deskripsi pakai bahasa inggris</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <p>Nikmati Hidangan Nusantara</p>
+        <a href="https://wa.me/6282261618110?text=Halo%2C%20saya%20ingin%20melakukan%20reservasi." target="_blank" rel="noopener" class="button">
+        Buku Menu
+        </a>
+        <div class="gallery">
+            {{ range .Site.Data.home.menu_images }}
+                <figure>
+                    <a href="https://www.instagram.com/canditirtojogya/" target="_blank"> 
+                    <img src="{{ . }}" alt="{{ path.Base . }}">
+                    </a>
+                </figure>
+            {{ end }}
+        </div>
+
+
+    </section>
+
+    <section id="contact">
+        <h2>Visit & Contact</h2>
+        <address>
+            <a href="https://maps.app.goo.gl/Gd7ErRG6F4Z1gab76" target="_blank" rel="noopener" >
+            Jl. Kasongan No.RT 03, Tirto, Bangunjiwo,<br>
+            Kec. Kasihan, Kabupaten Bantul, <br>
+            Daerah Istimewa Yogyakarta 55184
+            </a>
+        </address>
+
+        <a href="https://www.instagram.com/canditirtojogya/" target="_blank" class="button">Instagram</a>
+
+        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5028014901354!2d110.33461887592527!3d-7.842325777925576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a562c72dd6ba3%3A0xa269a541caa4b3db!2sCandi%20Tirto%20Raharjo!5e0!3m2!1sen!2sid!4v1789222376734!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    </section>
+
+    <section id="suasana">
+        <h2> Suasana </h2>
+        <div class="gallery">
+            {{ range .Site.Data.home.gallery }}
+                <figure>
+                    <img src="{{ .image }}" alt="{{ .caption }}">
+                    <figcaption>{{ .caption }}</figcaption>
+                </figure>
+            {{ end }}
+        </div>
+    </section>
+    {{ partial "footer.html" . }}
 </body>
 </html>

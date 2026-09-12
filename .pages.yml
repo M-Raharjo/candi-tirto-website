@@ -1,0 +1,32 @@
+media:
+  input: static/images
+  output: /images
+  rename: safe
+
+content:
+  - name: homepage
+    label: Homepage
+    type: file
+    path: data/home.yml
+    format: yaml
+
+    fields:
+      - name: menu_images
+        label: Menu Images
+        type: image
+        options:
+          multiple:
+            max: 4
+
+      - name: gallery
+        label: Gallery
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: image
+            type: image
+            
+          - name: caption
+            label: Caption
+            type: string
