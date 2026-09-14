@@ -18,10 +18,10 @@
             alt=""
 
         >
-
-        <h1> Candi Tirto Raharjo </h1>
-        <h2>{{.Site.Data.home.hero_subtitle}}</h2>
-
+        <div style="background: rgba(255,255,255,0.5); border-radius: var(--radius);">
+            <h1> Candi Tirto Raharjo </h1>
+            <h2>{{.Site.Data.home.hero_subtitle}}</h2>
+        </div>
         <div class="hero-buttons">
             <a href="#menu" class="button">Menu</a>
 
@@ -48,6 +48,7 @@
 
     <section id="about">
         <p>{{.Site.Data.home.about_id}}</p>
+        <hr>
         <p>{{.Site.Data.home.about_en}}</p>
     </section>
 

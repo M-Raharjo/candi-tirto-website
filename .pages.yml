@@ -1,7 +1,17 @@
 media:
-  input: static/images
-  output: images
-  rename: safe
+  - name: images
+    label: Images
+    input: static/images
+    output: /images
+    rename: safe
+    categories: [image]
+
+  - name: docs
+    label: Documents
+    input: static/docs
+    output: /docs
+    rename: safe
+    categories: [document]
 
 content:
   - name: homepage
@@ -11,6 +21,11 @@ content:
     format: yaml
 
     fields:
+      # LOGO
+
+      - name: logo
+        label: Main Logo
+        type: image
 
       # HERO
 
@@ -21,7 +36,6 @@ content:
       - name: hero_subtitle
         label: Hero Subtitle
         type: string
-
 
       # ABOUT
 
@@ -46,15 +60,14 @@ content:
         options:
           multiple:
             max: 8
-
+            
       - name: menu_pdf
-        label: menu PDF
+        label: Menu PDF
         type: file
         options:
+          media: docs
           extensions:
             - pdf
-
-
       # EVENT
 
       - name: event_description
