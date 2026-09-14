@@ -5,6 +5,7 @@
     --button-bg: black;
     --button-color: white;
     --hero-text-color: white;
+    --section-line: rgba(0, 0, 0, 0.08);
 
     --section-padding-y: 48px;
     --section-padding-x: 20px;
@@ -42,6 +43,8 @@ section {
     padding:
         var(--section-padding-y)
         var(--section-padding-x);
+    
+    border-bottom: 2px solid var(--section-line);
 
 }
 
@@ -139,6 +142,10 @@ figcaption {
 address {
     font-style: normal;
     margin-bottom: 20px;
+}
+
+address a {
+    white-space: pre-line;
 }
 
 .map {
