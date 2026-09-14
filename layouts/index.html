@@ -62,7 +62,7 @@
         <div class="gallery">
             {{ range .Site.Data.home.menu_images }}
                 <figure>
-                    <a href="{{ $.Site.Data.home.menu_pdf }}" target="_blank">
+                    <a href="{{ $.Site.Data.home.menu_pdf | relURL }}" target="_blank">
                     <img src="{{ . }}" alt="{{ path.Base . }}">
                     </a>
                 </figure>
