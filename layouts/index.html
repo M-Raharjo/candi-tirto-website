@@ -60,15 +60,27 @@
         <a href="{{ .Site.Data.home.menu_pdf }}" target="_blank" rel="noopener" class="button">
         Buku Menu
         </a>
-        <div class="gallery">
-            {{ range .Site.Data.home.menu_images }}
-                <figure>
-                    <a href="{{ $.Site.Data.home.menu_pdf | relURL }}" target="_blank">
-                    <img src="{{ . }}" alt="{{ path.Base . }}">
-                    </a>
-                </figure>
-            {{ end }}
+<div class="gallery">
+    {{ range $index, $image := .Site.Data.home.menu_images }}
+
+        <figure>
+            <a href="#menu-lightbox-{{ $index }}">
+                <img src="{{ $image }}" alt="{{ path.Base $image }}">
+            </a>
+        </figure>
+
+        <div id="menu-lightbox-{{ $index }}" class="lightbox">
+            <a href="#menu" class="lightbox-background"></a>
+
+            <div class="lightbox-content">
+                <img src="{{ $image }}" alt="{{ path.Base $image }}">
+
+                <a href="#menu" class="lightbox-close">×</a>
+            </div>
         </div>
+
+    {{ end }}
+</div>
     </section>
 
     <section id="event">
@@ -80,16 +92,36 @@
             "label" "Reservasi"
             "class" "button"
         ) }}
-        <div class="gallery">
+        {{/*  <div class="gallery">
             {{ range .Site.Data.home.gallery }}
                 <figure>
                     <img src="{{ .image }}" alt="{{ .caption }}">
                     <figcaption>{{ .caption }}</figcaption>
                 </figure>
             {{ end }}
-        </div>
-    </section>
+        </div>  */}}
+            <div class="gallery">
+            {{ range $index, $item := .Site.Data.home.gallery }}
+                <figure>
+                    <a href="#lightbox-{{ $index }}">
+                        <img src="{{ $item.image }}" alt="{{ $item.caption }}">
+                    </a>
 
+                    <figcaption>{{ $item.caption }}</figcaption>
+                </figure>
+
+                <div id="lightbox-{{ $index }}" class="lightbox">
+                    <a href="#event" class="lightbox-background"></a>
+
+                    <div class="lightbox-content">
+                        <img src="{{ $item.image }}" alt="{{ $item.caption }}">
+                        <p>{{ $item.caption }}</p>
+                        <a href="#event" class="lightbox-close">×</a>
+                    </div>
+            </div>
+    {{ end }}
+</div>
+</section>
     <section id="contact">
         <h2>Visit & Contact</h2>
         <address>
