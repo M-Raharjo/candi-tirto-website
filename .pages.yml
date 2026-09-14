@@ -11,22 +11,98 @@ content:
     format: yaml
 
     fields:
+
+      # HERO
+
+      - name: hero_image
+        label: Hero Image
+        type: image
+
+      - name: hero_subtitle
+        label: Hero Subtitle
+        type: string
+
+
+      # ABOUT
+
+      - name: about_id
+        label: Deskripsi Indonesia
+        type: text
+
+      - name: about_en
+        label: English Description
+        type: text
+
+
+      # MENU
+
+      - name: menu_description
+        label: Menu Description
+        type: text
+
       - name: menu_images
         label: Menu Images
         type: image
         options:
           multiple:
-            max: 4
+            max: 8
+
+      - name: menu_pdf
+        label: menu PDF
+        type: file
+        options:
+          extensions:
+            - pdf
+
+
+      # EVENT
+
+      - name: event_description
+        label: Event Description
+        type: text
 
       - name: gallery
-        label: Gallery
+        label: Event Gallery
         type: object
-        list: true
+        list:
+          max: 12
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
+
         fields:
           - name: image
-            label: image
+            label: Image
             type: image
-            
+
           - name: caption
             label: Caption
             type: string
+
+
+      # CONTACT
+
+      - name: whatsapp
+        label: WhatsApp Number
+        type: string
+        required: true
+        description: "Format: 6282261618110"
+        pattern:
+          regex: "^[0-9]+$"
+          message: "Gunakan angka saja tanpa +, spasi, atau tanda -"
+
+      - name: whatsapp_message
+        label: WhatsApp Default Message
+        type: text
+
+      - name: address
+        label: Address
+        type: text
+
+      - name: maps_url
+        label: Google Maps Link
+        type: string
+
+      - name: instagram_url
+        label: Instagram Link
+        type: string

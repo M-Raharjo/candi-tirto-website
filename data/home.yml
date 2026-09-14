@@ -1,21 +1,47 @@
+
+
+
+hero_image: https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-02-1030x687.jpg
+hero_subtitle: "#1 MICE Venue with Temple in Jogja"
+
+about_id: "Deskripsi bahasa Indonesia."
+about_en: "English description."
+
+menu_description: "Nikmati Hidangan Nusantara"
+menu_pdf: https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-02-1030x687.jpg
+
 menu_images:
   - https://ayomjogja.com/wp-content/uploads/2025/07/8-scaled.jpg
   - https://ayomjogja.com/wp-content/uploads/2025/07/13-scaled.jpg
   - https://ayomjogja.com/wp-content/uploads/2025/07/10-scaled.jpg
   - https://ayomjogja.com/wp-content/uploads/2025/07/9-scaled.jpg
 
+event_description: "Adakan event bersama teman, kerabat, dan keluarga."
+
 gallery:
   - image: https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-01-1030x687.jpg
-    caption: View Garden
+    caption: Event Company
 
   - image: https://ayomjogja.com/wp-content/uploads/2023/07/1-Ayom-Jogja-1030x687.jpg
-    caption: Event Wedding
+    caption: Wedding
 
   - image: https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-02-1030x687.jpg
-    caption: Event Conference
+    caption: Ulang Tahun
 
   - image: https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-04-1030x687.jpg
     caption: Ruwatan Candi
 
   - image: https://ayomjogja.com/wp-content/uploads/2023/07/Ayom-Jogja-Place-04-1030x687.jpg
-    caption: Candi Tirto Raharjo
+    caption: Kumpul Keluarga
+
+whatsapp: "6282261618110"
+whatsapp_message: "Halo, saya ingin melakukan reservasi. di candi tirto"
+
+address: |
+  Jl. Kasongan No.RT 03, Tirto, Bangunjiwo,
+  Kec. Kasihan, Kabupaten Bantul,
+  Daerah Istimewa Yogyakarta 55184
+
+maps_url: "https://maps.app.goo.gl/Gd7ErRG6F4Z1gab76"
+instagram_url: "https://www.instagram.com/canditirtojogya/"
+    
