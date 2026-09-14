@@ -2,14 +2,14 @@ media:
   - name: images
     label: Images
     input: static/images
-    output: /images
+    output: images
     rename: safe
     categories: [image]
 
   - name: docs
     label: Documents
     input: static/docs
-    output: /docs
+    output: docs
     rename: safe
     categories: [document]
 
