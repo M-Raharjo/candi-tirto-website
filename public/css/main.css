@@ -77,7 +77,7 @@
     text-decoration: none;
 }
 
-/* css lightbox */
+/* css lightbox end */
 
 
 * {
@@ -86,6 +86,16 @@
 
 header {
     margin: 1em 0;
+}
+
+.logo {
+    max-height: 100px;
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background-color: var(--button-bg);
+    border-radius: var(--radius);
 }
 
 body {
