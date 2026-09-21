@@ -1,13 +1,13 @@
 :root {
     --font: sans-serif;
 
-    --text-color: black;
-    --button-bg: black;
-    --button-color: white;
+    --text-color: rgba(59, 44, 30);
+    --button-bg: rgba(229, 225, 213);
     --hero-text-color: white;
     --section-line: rgba(0, 0, 0, 0.08);
 
-    --page-bg : rgb(160, 106, 26);
+    --page-bg :rgba(229, 225, 213);
+    --section-alt-bg: rgb(204, 198, 184);
 
     --section-padding-y: 48px;
     --section-padding-x: 20px;
@@ -17,7 +17,7 @@
 
     --radius: 8px;
 
-    --hero-overlay: rgba(0, 0, 0, 0.2);
+    --hero-overlay: rgba(0, 0, 0, 0.1);
 
     --gallery-columns: 2;
     --gallery-gap: 1px;
@@ -84,15 +84,17 @@
 
 * {
     box-sizing: border-box;
+    
 }
 
 header {
-    margin: 1em 0;
+    padding: 1em 0;
+    
 }
 
 .logo {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 150px;
+    max-width: 150px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -106,6 +108,7 @@ body {
     line-height: 1.5;
     text-align: center;
     color: var(--text-color);
+    background: var(--page-bg);
 }
 
 section {
@@ -113,8 +116,13 @@ section {
         var(--section-padding-y)
         var(--section-padding-x);
     
-    border-bottom: 2px solid var(--section-line);
+    /* border-bottom: 2px solid var(--section-line); */
+    background: transparent;
 
+}
+
+section:nth-of-type(even) {
+    background: var(--section-alt-bg);
 }
 
 h1,
@@ -135,7 +143,7 @@ a {
         var(--button-padding-x);
 
     background: var(--button-bg);
-    color: var(--button-color);
+    color: var(--text-color);
 
     text-decoration: none;
     border-radius: var(--radius);
@@ -232,4 +240,18 @@ address a {
     width: 100%;
     height: var(--map-height);
     border: 0;
+}
+
+
+/* Hide Scroll Bar */
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+body {
+    -ms-overflow-style: none; /* old Edge / IE */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
