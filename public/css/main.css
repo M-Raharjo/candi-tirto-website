@@ -89,6 +89,7 @@
 
 header {
     padding: 1em 0;
+    background-color: rgba(59, 44, 30);
     
 }
 
@@ -98,8 +99,8 @@ header {
     width: auto;
     height: auto;
     object-fit: contain;
-    background-color: var(--button-bg);
-    border-radius: var(--radius);
+    /* background-color: rgba(59, 44, 30); */
+    border-radius: 20px;
 }
 
 body {
@@ -255,3 +256,4 @@ body {
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
+
