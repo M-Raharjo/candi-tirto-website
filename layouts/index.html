@@ -125,7 +125,7 @@
 </div>
 </section>
     <section id="contact">
-        <h2>Visit & Contact</h2>
+        <h2>Lokasi & Kontak</h2>
         <address>
             <a
                 href="{{ .Site.Data.home.maps_url }}"
@@ -134,7 +134,16 @@
             >
                 {{ .Site.Data.home.address }}
             </a>
+
+
         </address>
+
+            {{ partial "whatsapp-link.html" (dict
+                "number" .Site.Data.home.whatsapp
+                "message" .Site.Data.home.whatsapp_message
+                "label" "Whatsapp"
+                "class" "button"
+            ) }}
 
         <a href="{{ .Site.Data.home.instagram_url }}" target="_blank" class="button">Instagram</a>
 
