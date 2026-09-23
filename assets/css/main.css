@@ -89,6 +89,7 @@
 
 header {
     padding: 1em 0;
+    background-color: rgba(59, 44, 30);
     
 }
 
@@ -148,6 +149,7 @@ a {
     text-decoration: none;
     border-radius: var(--radius);
     font-weight: bold;
+    border:  2px solid var(--text-color) ;
 }
 
 .hero-buttons {
