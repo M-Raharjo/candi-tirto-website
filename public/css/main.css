@@ -110,6 +110,9 @@ body {
     text-align: center;
     color: var(--text-color);
     background: var(--page-bg);
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 section {
