@@ -64,6 +64,7 @@
         </a>
 <div class="gallery">
     {{ range $index, $image := .Site.Data.home.menu_images }}
+        {{ with $image}}
 
         <figure>
             <a href="#menu-lightbox-{{ $index }}">
@@ -80,6 +81,7 @@
                 <a href="#menu" class="lightbox-close">×</a>
             </div>
         </div>
+        {{end}}
 
     {{ end }}
 </div>
@@ -104,6 +106,7 @@
         </div>  */}}
             <div class="gallery">
             {{ range $index, $item := .Site.Data.home.gallery }}
+            {{with $item.image}}
                 <figure>
                     <a href="#lightbox-{{ $index }}">
                         <img src="{{ $item.image }}" alt="{{ $item.caption }}">
@@ -111,7 +114,6 @@
 
                     <figcaption>{{ $item.caption }}</figcaption>
                 </figure>
-
                 <div id="lightbox-{{ $index }}" class="lightbox">
                     <a href="#event" class="lightbox-background"></a>
 
@@ -121,6 +123,7 @@
                         <a href="#event" class="lightbox-close">×</a>
                     </div>
             </div>
+            {{end}}
     {{ end }}
 </div>
 </section>
